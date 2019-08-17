@@ -21,6 +21,10 @@ namespace WindowsFormsApp1
             this.s = s;
         }
 
+        ~setting()
+        {
+            Application.Exit();
+        }
 
         private void setting_Load(object sender, EventArgs e)
         {
@@ -32,7 +36,7 @@ namespace WindowsFormsApp1
         {
             //StartForm s = new StartForm();
             s.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -190,6 +194,8 @@ namespace WindowsFormsApp1
         private void setting_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+            //s.Show();
+            //this.Close();
         }
     }
 }

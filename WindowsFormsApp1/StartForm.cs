@@ -21,6 +21,7 @@ namespace WindowsFormsApp1
         List<question> l;
         String questionFileName = "questions.txt";
         question q1;
+        setting s;
         public StartForm()
         {
             InitializeComponent();
@@ -150,7 +151,8 @@ namespace WindowsFormsApp1
 
         private void settingbtn_Click(object sender, EventArgs e)
         {
-            setting s = new setting(this);
+            if(s == null)
+                s = new setting(this);
             this.Hide();
             s.Show();
         }
