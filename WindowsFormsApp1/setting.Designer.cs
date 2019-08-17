@@ -88,7 +88,7 @@
             this.Passwordtb.Size = new System.Drawing.Size(256, 38);
             this.Passwordtb.TabIndex = 13;
             this.Passwordtb.UseSystemPasswordChar = true;
-            this.Passwordtb.TextChanged += new System.EventHandler(this.Passwordtb_TextChanged);
+            this.Passwordtb.TextChanged += new System.EventHandler(this.UserNametb_TextChanged);
             // 
             // label6
             // 
@@ -367,6 +367,7 @@
             this.Name = "setting";
             this.ShowIcon = false;
             this.Text = "setting";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.setting_FormClosing);
             this.Load += new System.EventHandler(this.setting_Load);
             this.tabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

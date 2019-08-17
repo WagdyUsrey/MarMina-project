@@ -21,6 +21,7 @@ namespace WindowsFormsApp1
             this.s = s;
         }
 
+
         private void setting_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
@@ -82,14 +83,6 @@ namespace WindowsFormsApp1
                 SignInbtn.Enabled = false;
         }
 
-        private void Passwordtb_TextChanged(object sender, EventArgs e)
-        {
-            if (Passwordtb.Text.Length > 5 && UserNametb.Text.Length != 0)
-                SignInbtn.Enabled = true;
-            else
-                SignInbtn.Enabled = false;
-        }
-
         private void SignInbtn_Click(object sender, EventArgs e)
         {
             FileStream stream = new FileStream("admin.txt", FileMode.OpenOrCreate);
@@ -134,7 +127,7 @@ namespace WindowsFormsApp1
 
         private void AdminPasswordtb_TextChanged(object sender, EventArgs e)
         {
-                        if (AdminNametb.Text.Length != 0 && AdminPasswordtb.Text.Length > 5)
+            if (AdminNametb.Text.Length != 0 && AdminPasswordtb.Text.Length > 5)
                 SaveAdmin.Enabled = true;
             else
                 SaveAdmin.Enabled = false;
@@ -192,6 +185,11 @@ namespace WindowsFormsApp1
                 savebtn.Enabled = true;
             else
                 savebtn.Enabled = false;
+        }
+
+        private void setting_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
