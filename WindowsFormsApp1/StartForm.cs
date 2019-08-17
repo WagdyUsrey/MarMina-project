@@ -162,17 +162,18 @@ namespace WindowsFormsApp1
             {
                 if (ch % 256 < 128)
                 {
-                    char c = (char)(ch + 124);
+                    char c = (char)(ch + 128);
                     output += c;
                 }
                 else
                 {
-                    char c = (char)(ch - 124);
+                    char c = (char)(ch - 128);
                     output += c;
                 }
             }
             return output;
-        }
+        }   
+
     }
 
     class question
