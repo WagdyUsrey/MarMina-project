@@ -34,6 +34,13 @@ namespace WindowsFormsApp1
 
         private void backbtn_Click(object sender, EventArgs e)
         {
+            tabControl.Visible = false;
+
+            UserNametb.Visible = true;
+            label7.Visible = true;
+            label6.Visible = true;
+            SignInbtn.Visible = true;
+            Passwordtb.Visible = true;
             //StartForm s = new StartForm();
             s.Show();
             this.Hide();

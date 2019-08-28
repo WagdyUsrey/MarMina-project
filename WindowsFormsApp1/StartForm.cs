@@ -153,8 +153,8 @@ namespace WindowsFormsApp1
         {
             if(s == null)
                 s = new setting(this);
-            this.Hide();
             s.Show();
+            this.Hide();
         }
 
         public string transform(string input)
